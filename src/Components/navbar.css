@@ -1,0 +1,55 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  background: rgb(173, 173, 173);
+  width: 100%;
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.logo {
+  padding: 10px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: inherit; /* Ensure links inherit color from navbar */
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 0 20px;
+}
+
+.cart button {
+  border: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  background-color: rgb(226, 43, 43);
+  border-radius: 20px;
+  color: white;
+}

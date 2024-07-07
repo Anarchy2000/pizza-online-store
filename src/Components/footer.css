@@ -1,0 +1,53 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  background: rgba(173, 173, 173, 0.75);
+  display: block;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 40px;
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.footer-left {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-right {
+  display: flex;
+  gap: 1rem;
+}

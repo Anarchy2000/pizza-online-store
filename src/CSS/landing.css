@@ -1,0 +1,94 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #504444;
+  color: #333;
+}
+
+.landing-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.landing-header {
+  background: #ff6f61;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.landing-header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.landing-header p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: #e6e6e6;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #ddd;
+}
+
+.featured-pizzas {
+  margin: 20px 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.featured-pizzas h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.pizza-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pizza-item {
+  background: #ff6f61;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 350px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center text */
+}
+
+.pizza-item h3 {
+  padding: 10px;
+  font-size: 1.5em;
+  background: #ff6f61;
+  color: white;
+  margin: 0;
+  width: 100%;
+}
