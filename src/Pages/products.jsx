@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 function Products({ setCartItems, cartItems }) {
+  //map for items
   const pizzas = [
     {
       id: 1,
@@ -81,13 +82,17 @@ function Products({ setCartItems, cartItems }) {
   ];
 
   const addToCart = (pizza) => {
+    //variable to check if the pizza is already in the cart by matching the id
     const existingItem = cartItems.find((item) => item.id === pizza.id);
+
     if (existingItem) {
+      //if it is in the cart already increase the quantity of that specific pizza
       setCartItems(
         cartItems.map((item) =>
           item.id === pizza.id ? { ...item, quantity: item.quantity + 1 } : item
         )
       );
+      //else if it isn't in the cart, add it to the cart and set its value to 1
     } else {
       setCartItems([...cartItems, { ...pizza, quantity: 1 }]);
     }
@@ -100,15 +105,17 @@ function Products({ setCartItems, cartItems }) {
       </h2>
       <Row>
         {pizzas.map((pizza) => (
-          <Col key={pizza.id}>
-            <Card style={{ width: "15rem", margin: "15px 10px" }}>
+          <Col key={pizza.id} md={6} lg={4} xl={3}>
+            <Card
+              style={{ width: "15rem", margin: "15px 10px", padding: "20px" }}
+            >
               <Card.Img variant="top" src={pizza.image}></Card.Img>
               <Card.Body>
                 <Card.Title>{pizza.name}</Card.Title>
                 <Card.Text style={{ fontSize: "13px" }}>
                   {pizza.toppings}
                 </Card.Text>
-                <Card.Text>${pizza.price}</Card.Text>
+                <Card.Text>R{pizza.price}</Card.Text>
                 <Button variant="secondary" onClick={() => addToCart(pizza)}>
                   Add to Cart
                 </Button>

@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #504444;
+  background-color: #f8f9fa;
   color: #333;
 }
 
@@ -22,7 +22,6 @@ body {
   padding: 40px 20px;
   border-radius: 8px;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
 }
 
 .landing-header h1 {
@@ -43,24 +42,29 @@ body {
   border-radius: 5px;
   font-size: 1.2em;
   text-decoration: none;
+  margin: 5px;
 }
 
 .cta-button:hover {
   background: #ddd;
 }
 
-.featured-pizzas {
+.intro-section,
+.featured-pizzas,
+.testimonials,
+.cta-section {
   margin: 20px 0;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.featured-pizzas h2 {
+.intro-section h2,
+.featured-pizzas h2,
+.testimonials h2 {
   font-size: 2em;
-  margin-bottom: 20px;
-  color: #fff;
+  margin-bottom: 10px;
 }
 
 .pizza-gallery {
@@ -71,17 +75,18 @@ body {
 }
 
 .pizza-item {
-  background: #ff6f61;
+  background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 350px; /* Fixed width */
-  height: 150px; /* Fixed height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center; /* Center text */
+  text-align: center;
+  width: 200px;
+}
+
+.pizza-item img {
+  width: 100%;
+  height: auto;
 }
 
 .pizza-item h3 {
@@ -90,5 +95,29 @@ body {
   background: #ff6f61;
   color: white;
   margin: 0;
-  width: 100%;
+}
+
+.pizza-item p {
+  padding: 10px;
+  font-size: 1em;
+}
+
+.testimonial-item {
+  margin: 10px 0;
+}
+
+.testimonial-item p:first-child {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.testimonial-item p:last-child {
+  font-size: 1em;
+  text-align: right;
+}
+
+.cta-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }

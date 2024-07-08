@@ -1,6 +1,7 @@
 import React from "react";
 import "../CSS/cart.css";
 
+//callback functions from the app page for the selected items in the products page
 function CartPage({ cartItems, setCartItems }) {
   const handleQuantityChange = (id, newQuantity) => {
     setCartItems(
@@ -23,14 +24,17 @@ function CartPage({ cartItems, setCartItems }) {
     <div className="cart-container">
       <h2>Your Cart</h2>
       <div className="cart-items">
+        {/* Map for all items that will be added to the page */}
         {cartItems.map((item) => (
           <div key={item.id} className="cart-item">
             <img src={item.image} alt={item.name} />
             <div className="cart-item-details">
               <h3>{item.name}</h3>
-              <p>${item.price}</p>
+              <p>R{item.price}</p>
               <div className="quantity-controls">
                 <button
+                  // changing the amount on button click to remove item by 1
+                  // as well as grey out the button if they try to go below 1
                   onClick={() =>
                     handleQuantityChange(item.id, item.quantity - 1)
                   }
@@ -40,6 +44,7 @@ function CartPage({ cartItems, setCartItems }) {
                 </button>
                 <span>{item.quantity}</span>
                 <button
+                  //Increase the amount of the item by 1 on button click
                   onClick={() =>
                     handleQuantityChange(item.id, item.quantity + 1)
                   }
@@ -49,6 +54,7 @@ function CartPage({ cartItems, setCartItems }) {
               </div>
               <button
                 className="remove-button"
+                //remove selected item from the cart
                 onClick={() => handleRemoveItem(item.id)}
               >
                 Remove
@@ -58,7 +64,8 @@ function CartPage({ cartItems, setCartItems }) {
         ))}
       </div>
       <div className="cart-total">
-        <h3>Total: ${totalPrice.toFixed(2)}</h3>
+        {/* total price of all items as well as check out  */}
+        <h3>Total: R{totalPrice.toFixed(2)}</h3>
         <button className="checkout-button">Checkout</button>
       </div>
     </div>
