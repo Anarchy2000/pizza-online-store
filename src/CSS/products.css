@@ -1,14 +1,16 @@
-/* ProductsPage.css */
 .products-container {
   padding: 30px;
   text-align: center;
-  color: #ddd;
+  color: #333;
   margin-bottom: 20px;
 }
+
 .products-container h2 {
   margin-bottom: 20px;
-  font-size: 50px;
+  font-size: 2em;
+  color: #ff6f61;
 }
+
 .products-grid {
   display: flex;
   flex-wrap: wrap;
@@ -17,7 +19,7 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.548);
+  background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;

@@ -118,7 +118,7 @@ function CartPage() {
       </div>
       {orderReceived && (
         <div className="order-received-message">
-          <h3>Order received! Redirecting to landing page...</h3>
+          <h3>Order received! Redirecting ...</h3>
         </div>
       )}
       <Modal show={showHelp} onHide={handleCloseHelp}>
