@@ -19,6 +19,11 @@ html {
   padding: 10px;
 }
 
+.logo img {
+  width: 70px;
+  height: auto;
+}
+
 .links {
   display: flex;
   align-items: center;
@@ -38,6 +43,10 @@ html {
   color: inherit; /* Ensure links inherit color from navbar */
 }
 
+.links a:hover {
+  text-decoration: underline;
+}
+
 .cart {
   display: flex;
   align-items: center;
@@ -52,4 +61,13 @@ html {
   background-color: rgb(226, 43, 43);
   border-radius: 20px;
   color: white;
+}
+
+.cart a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cart a:hover {
+  text-decoration: underline;
 }

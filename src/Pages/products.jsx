@@ -1,10 +1,13 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../Store/cartSlice";
 import "../CSS/products.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
-function Products({ setCartItems, cartItems }) {
+function Products() {
+  const dispatch = useDispatch();
   //map for items
   const pizzas = [
     {
@@ -43,7 +46,7 @@ function Products({ setCartItems, cartItems }) {
       id: 5,
       name: "BBQ Chicken Pizza",
       price: 90.0,
-      toppings: "Mozzerella cheese, Shredded Chicken, Mushroom, BBQ sauce",
+      toppings: "Mozzerella cheese, Chicken, Mushroom, BBQ sauce",
       image:
         "https://images.pexels.com/photos/2271197/pexels-photo-2271197.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
@@ -67,7 +70,7 @@ function Products({ setCartItems, cartItems }) {
       id: 8,
       name: "Hot One",
       price: 90.0,
-      toppings: "Mozzerella cheese,Chilli Base, Green Pepper, Beef & Onion",
+      toppings: "Mozzerella cheese,Chilli Base, Beef & Onion",
       image:
         "https://images.pexels.com/photos/4109137/pexels-photo-4109137.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
@@ -81,23 +84,9 @@ function Products({ setCartItems, cartItems }) {
     },
   ];
 
-  const addToCart = (pizza) => {
-    //variable to check if the pizza is already in the cart by matching the id
-    const existingItem = cartItems.find((item) => item.id === pizza.id);
-
-    if (existingItem) {
-      //if it is in the cart already increase the quantity of that specific pizza
-      setCartItems(
-        cartItems.map((item) =>
-          item.id === pizza.id ? { ...item, quantity: item.quantity + 1 } : item
-        )
-      );
-      //else if it isn't in the cart, add it to the cart and set its value to 1
-    } else {
-      setCartItems([...cartItems, { ...pizza, quantity: 1 }]);
-    }
+  const handleAddToCart = (pizza) => {
+    dispatch(addToCart(pizza));
   };
-
   return (
     <Container>
       <h2 style={{ textAlign: "center", marginTop: "15px", fontSize: "50px" }}>
@@ -116,7 +105,10 @@ function Products({ setCartItems, cartItems }) {
                   {pizza.toppings}
                 </Card.Text>
                 <Card.Text>R{pizza.price}</Card.Text>
-                <Button variant="secondary" onClick={() => addToCart(pizza)}>
+                <Button
+                  variant="secondary"
+                  onClick={() => handleAddToCart(pizza)}
+                >
                   Add to Cart
                 </Button>
               </Card.Body>

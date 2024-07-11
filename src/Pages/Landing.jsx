@@ -7,7 +7,7 @@ const LandingPage = () => {
       <header className="landing-header">
         <h1>Welcome to Preposterously Large Pizza's</h1>
         <p>Explore our delicious range of oversized pizzas!</p>
-        <a href="/products" className="cta-button">
+        <a href="/menu" className="cta-button">
           Order Now
         </a>
       </header>
