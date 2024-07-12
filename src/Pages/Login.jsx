@@ -24,6 +24,7 @@ const Login = ({ onLogin }) => {
         <Formik
           initialValues={{ username: "", password: "" }}
           validationSchema={LoginSchema}
+          //simulate loading as submitting
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
               setSubmitting(false);

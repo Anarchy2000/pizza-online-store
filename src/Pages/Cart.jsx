@@ -83,6 +83,7 @@ function CartPage() {
         ))}
       </div>
 
+      {/* delivery or collection option  */}
       <div className="order-type">
         <label>
           <input
@@ -104,12 +105,16 @@ function CartPage() {
         </label>
       </div>
 
-      {/* create a function to give the user the opion to have delivery or pickup */}
       <div className="cart-total">
         {/* total price of all items as well as check out  */}
         <h3>Total: R{totalPrice.toFixed(2)}</h3>
 
-        <button className="checkout-button" onClick={handleCheckout}>
+        <button
+          className="checkout-button"
+          onClick={handleCheckout}
+          //if the total is 0 then the button is disables
+          disabled={totalPrice === 0}
+        >
           Checkout
         </button>
         <button className="help-button" onClick={handleShowHelp}>
@@ -121,6 +126,7 @@ function CartPage() {
           <h3>Order received! Redirecting ...</h3>
         </div>
       )}
+      {/* Help popup as modal  */}
       <Modal show={showHelp} onHide={handleCloseHelp}>
         <Modal.Header closeButton>
           <Modal.Title>Shipping Options</Modal.Title>

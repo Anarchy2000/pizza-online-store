@@ -1,4 +1,3 @@
-/* CartPage.css */
 .cart-container {
   padding: 20px;
   text-align: center;
@@ -72,8 +71,17 @@
   cursor: pointer;
 }
 
+.order-type {
+  margin-bottom: 20px;
+}
+
+.order-type label {
+  margin-right: 10px;
+}
+
 .cart-total {
   font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 .checkout-button {
@@ -83,30 +91,26 @@
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  margin-right: 20px;
+  margin-right: 10px;
+}
+
+.checkout-button:disabled {
+  background: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
 }
 
 .help-button {
-  background: #007bff;
+  background: #2196f3;
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  margin-top: 10px;
-}
-
-.order-type {
-  margin: 20px 0;
-}
-
-.order-type label {
-  font-size: 1.2em;
-  margin: 0 10px;
 }
 
 .order-received-message {
   margin-top: 20px;
-  font-size: 1.5em;
-  color: #4caf50;
+  font-size: 1.2em;
+  color: green;
 }
