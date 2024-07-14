@@ -34,7 +34,7 @@ const LandingPage = () => {
           </div>
           <div className="pizza-item">
             <img
-              src="https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&w=600"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCTVJZ0JoCH4LqGh38qW_w2kVzY1E6auBz8g&s"
               alt="Meat Lovers"
             />
             <h3>Meat Lovers</h3>
@@ -42,7 +42,7 @@ const LandingPage = () => {
           </div>
           <div className="pizza-item">
             <img
-              src="https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&w=600"
+              src="https://www.cashlinkresandpub.co.za/wp-content/uploads/2022/09/b7b5da3a934bf52a53bd937bd45e0dfb.jpg"
               alt="F.A.B"
             />
             <h3>F.A.B</h3>

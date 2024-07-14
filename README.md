@@ -13,29 +13,6 @@ This project is an online store for a pizza shop built with React and Redux. Use
 - Checkout process
 - Help section with shipping options information
 
-## Installation
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/your-username/pizza-online-store.git
-   cd pizza-online-store
-   ```
-
-2. **Install dependencies:**
-
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server:**
-
-   ```bash
-   npm start
-   ```
-
-   The application will be available at `http://localhost:3000`.
-
 ## Usage
 
 ### Registering a New User
@@ -88,11 +65,3 @@ This project is an online store for a pizza shop built with React and Redux. Use
 - React Router
 - Formik and Yup for form validation
 - React Bootstrap for UI components
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any bugs or feature requests.
-
-## License
-
-This project is licensed under the MIT License.

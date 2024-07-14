@@ -12,10 +12,13 @@ html {
   font-size: 20px;
   background: rgb(173, 173, 173);
   width: 100%;
-  padding: 10px; /* Adjust padding as needed */
+  padding: 10px;
 }
 
 .logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
   padding: 10px;
 }
 
@@ -25,9 +28,10 @@ html {
 }
 
 .links {
+  flex: 2;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .links ul {
@@ -40,7 +44,7 @@ html {
 
 .links a {
   text-decoration: none;
-  color: inherit; /* Ensure links inherit color from navbar */
+  color: inherit;
 }
 
 .links a:hover {
@@ -48,10 +52,11 @@ html {
 }
 
 .cart {
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
-  padding-right: 0 20px;
 }
 
 .cart button {
@@ -61,6 +66,7 @@ html {
   background-color: rgb(226, 43, 43);
   border-radius: 20px;
   color: white;
+  cursor: pointer;
 }
 
 .cart a {
@@ -70,4 +76,9 @@ html {
 
 .cart a:hover {
   text-decoration: underline;
+}
+
+.cart span {
+  font-size: 1em;
+  margin-right: 10px;
 }
